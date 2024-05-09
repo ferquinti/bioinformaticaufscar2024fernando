@@ -1,0 +1,12 @@
+ALGORÍTIMO: DESCOBRIR SE UM NÚMERO É PRIMO
+Input: número inteiro positivo maior que 1
+Output: True or False
+  Input (x)
+    If x > 1 do:
+      for y in range (2, x) do:
+        if x%y == 0 do:
+          return “False”
+          break
+        else do:
+          return “True”
+          break
