@@ -1,0 +1,20 @@
+print("Oi, temos os seguintes resultados:")
+
+# Esses são os dados entrados em aula:
+A3, A2, A1 = {0, 1, 5, 7, 2, 4}, {1, 2, 4, 5}, {2, 3, 4, 5, 6}
+
+# Cálculo do diagrama de Venn
+a = A1 - A2 - A3  # O que só tem em A1
+b = A2 - A1 - A3  # O que só tem em A2
+c = A3 - A1 - A2  # O que só tem em A3
+ab = A1 & A2 - A3  # Só o que tem entre A1 e A2
+ac = A1 & A3 - A2  # Só o que tem entre A1 e A3
+bc = A2 & A3 - A1  # Só o que tem entre A2 e A3
+
+# O que só tem em comum entre os 3:
+abc = (A1 | A2 | A3) - a - b - c - ab - ac - bc
+
+# Print dos resultados
+print("a:", a, "b:", b, "c:", c, "ab:", ab, "ac:", ac, "bc:", bc, "abc:", abc)
+
+input("Clique enter para sair")
