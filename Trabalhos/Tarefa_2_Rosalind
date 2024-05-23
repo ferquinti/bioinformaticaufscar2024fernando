@@ -1,0 +1,61 @@
+#Código feito para passar pelo desafio 2:
+def hip(a:int, b:int):
+     if a < 1000 and b < 1000:
+         QH = a**2 + b**2
+         return QH
+     else:
+         print("Os valores de a e b devem ser menores que 1000")
+
+#Código feito para passar pelo desafio 3:
+def Quebrar_String(s:str, a:int, b:int, c:int, d:int):
+    if len(s) < 200:
+         S1 = s[a:b+1]
+         S2 = s[c:d+1]
+         R = S1 + " " + S2
+         return R
+    else:
+        print("A string tem mais de 200 caracteres")
+
+#Código feito para passar pelo desafio 4:
+def somar_impares(a:int, b:int):
+     if b < 10000 and a < b:
+         soma_inteiros = 0
+         for x in range(a, b+1):
+             if x%2 != 0:
+                 soma_inteiros += x
+         return soma_inteiros
+     else:
+         print("Não se aplica a condição imposta")
+
+#Código feito para passar pelo desafio 5:
+inp = "input.txt"
+out = "output.txt"
+
+def f_linhas_pares(inp: str, out: str):
+     with open(inp, 'r') as infile:
+         linha = infile.readlines()
+     if len(linha) < 200:
+         linhas_pares = [linha for index, linha in enumerate(linha, start=1) if index % 2 == 0]
+         with open(out, 'w') as outfile:
+             outfile.writelines(linhas_pares)
+     else:
+         print("não atende aos requisitos impostos")
+
+
+#Código feito para passar pelo desafio 6:
+def contagem_palavras(s: str):
+    if len(s) < 10000:
+        palavras = s.split()
+        palavras_contadas = {}
+        for word in palavras:
+            if word in palavras_contadas:
+                palavras_contadas[word] += 1
+            else:
+                palavras_contadas[word] = 1
+        linhas = [f"{word} {count}" for word, count in palavras_contadas.items()]
+        resposta = "\n".join(linhas)
+        return resposta
+    else:
+        print("Essa string tem mais de 10000 caracteres")
+
+print(contagem_palavras(s))
