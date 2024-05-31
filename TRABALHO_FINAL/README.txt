@@ -1,6 +1,6 @@
-Scrpts:
-    Pasta que organizar todos os scrpts:
-        ler o readme de Scrpts na pasta correspondete
+SCRPTS:
+    Pasta que organizar todos os scripts:
+        ler o readme de SCRPTS na pasta correspondete
 ANALYSIS:
     Pasta contendo todas as figuras e analises geradas a partir do arquivo main.py:
         ler o readme de ANALYSIS na pasta correspondete
